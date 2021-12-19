@@ -1,0 +1,7 @@
+.navbar{
+     display: flex;
+     align-items: center;
+     margin: 30px;
+     background: rgb(15, 15, 15);
+     height: 200px;
+}
