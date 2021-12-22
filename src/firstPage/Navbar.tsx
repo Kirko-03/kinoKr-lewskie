@@ -9,8 +9,8 @@ return  <div className={style.navbar}>
      <button>KRESKÓWKI</button>
      <button>ANIME</button>
      <button>WYBORY</button>
-     <input placeholder={'Введите название'}/>
+     <input placeholder={'Wpisz tytuł'}/>
      </div>
-     <button>Войти</button>
+     <button>Wejść</button>
 </div>
 }
