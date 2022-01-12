@@ -1,0 +1,10 @@
+.main{
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    margin-top: 0px;
+    padding:10px;
+    background: rgb(15, 15, 15);
+    min-height: 200px;
+    color:wheat
+}

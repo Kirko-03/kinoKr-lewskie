@@ -7,6 +7,7 @@ import { Footer } from './firstPage/Footer';
 
 
 function App() {
+  
   return (
     <div className="App">
       <div className="firstPage">
