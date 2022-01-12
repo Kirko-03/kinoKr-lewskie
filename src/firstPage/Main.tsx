@@ -12,7 +12,7 @@ type PostType = {
 export let Main = () =>{
     let [res,setRes] = useState<Array<PostType>>([]) 
 useEffect(()=>{
-     API.apiFunc().then(res=>setRes(res.data.map((el:PostType)=>el.body)))
+     API.apiFunc().then(res=>setRes(res.data.map((el:PostType)=><li>{el.body}</li>)))
 },[])   
 console.log(res)
     return <div className={style.main}> 

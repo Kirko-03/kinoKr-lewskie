@@ -1,12 +1,17 @@
 
 .App{
-  background-image: url("https://avatars.mds.yandex.net/get-zen_doc/1680084/pub_5fd616c90b82510af58e1a15_5fd717595a2c8e1f2c371627/scale_1200");
+  background: black;
+  background-image: url("https://thumbs.dfs.ivi.ru/storage23/contents/1/5/1da34a4faa2a17d55621845df4d98e.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  
   display: flex;
   justify-content: center;
   align-items: center;
   height: 1400px;
 }
 .firstPage{
+  opacity: 80%;
   background: rgb(34, 31, 31);
   width: 70%;
   height: 75%;

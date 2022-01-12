@@ -1,0 +1,10 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 0px;
+    padding:10px;
+    background: rgb(66, 9, 9);
+    min-height: 200px;
+    color:white
+}
