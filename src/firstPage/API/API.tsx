@@ -2,9 +2,9 @@ import axios from "axios";
 
 export  class API{
    static async apiFunc(){
-       let response=await axios.get(`https://jsonplaceholder.typicode.com/posts?_limit=10&_page=1`,{
+       let response=await axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=54330e58`,{
        })       
-       return response
+       return response.data
        }
    
 }

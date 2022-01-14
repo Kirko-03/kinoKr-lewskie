@@ -1,21 +1,14 @@
-import { useEffect, useState } from 'react'
-import { API } from './API/API'
 import style from './Main.module.css'
 
-type PostType = {
-    [key: string]: any;
-    id: number;
-    title: string;
-    body: string;
-  };
+type MainType={
+    poster:string
+    res:string
+}
 
-export let Main = () =>{
-    let [res,setRes] = useState<Array<PostType>>([]) 
-useEffect(()=>{
-     API.apiFunc().then(res=>setRes(res.data.map((el:PostType)=><li>{el.body}</li>)))
-},[])   
-console.log(res)
+export let Main = (props:MainType) =>{ 
+
     return <div className={style.main}> 
-{res}
+<img  className={style.poster} src={props.poster} alt=""/>
+{props.res}
         </div>
 }
