@@ -8,18 +8,18 @@ import { API } from './firstPage/API/API';
 
 
 function App() {
-  let [res,setRes] = useState('')
-  let [bigRes,setBigRes] = useState('')
-  let [poster,setPoster] = useState('') 
+  let [res,setRes] = useState<Array<string>>([])
+  let [bigRes,setBigRes] = useState<Array<string>>([])
+  let [poster,setPoster] = useState<Array<string>>([]) 
 
   useEffect(()=>{
-    API.apiFunc().then(res=>setRes(`Tytuł:${res.Title},rok:${res.Year},scenarzysta:${res.Writer}, aktorzy:${res.Actors}`))
-    API.apiFunc().then(res=>setBigRes(`Tytuł:${res.Title},rok:${res.Year},scenarzysta:${res.Writer}, aktorzy:${res.Actors},oceniany:${res.Rated},
-    Wydany:${res.Released},Czas pracy:${res.Runtime},Gatunek muzyczny:${res.Genre},Dyrektor:${res.Director},Wątek:${res.Plot},Język:${res.Language},
-    Kraj:${res.Country},Nagrody:${res.Awards}
-    `))
-    API.apiFunc().then(post=>setPoster(JSON.parse(JSON.stringify(post.Poster))))
-},[])  
+    API.apiFunc().then(res=>setRes(res.map(el=>`Tytuł:${el.data.Title},rok:${el.data.Year},scenarzysta:${el.data.Writer}, aktorzy:${el.data.Actors}`)))
+    API.apiFunc().then(res=>setBigRes(res.map(el=>`Tytuł:${el.data.Title},rok:${el.data.Year},scenarzysta:${el.data.Writer}, aktorzy:${el.data.Actors},oceniany:${el.data.Rated},
+    Wydany:${el.data.Released},Czas pracy:${el.data.Runtime},Gatunek muzyczny:${el.data.Genre},Dyrektor:${el.data.Director},Wątek:${el.data.Plot},Język:${el.data.Language},
+    Kraj:${el.data.Country},Nagrody:${el.data.Awards}
+    `)))
+    API.apiFunc().then(post=>setPoster(JSON.parse(JSON.stringify(post.map(el=>el.data.Poster))))
+  )},[])  
   return (
     <div className="App">
       <div className="firstPage">

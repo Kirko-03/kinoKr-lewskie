@@ -2,18 +2,17 @@ import { Cinema } from "./Cinema"
 
 
 type MainType={
-    bigRes:string
-    poster:string
-    res:string
+    bigRes:Array<string>
+    poster:Array<string>
+    res:Array<string>
 }
 
 export let Main = (props:MainType) =>{ 
 
+console.log(props);
+
     return <div> 
-<Cinema res={props.res} bigRes={props.bigRes} poster={props.poster}/>
-
-<Cinema res={props.res} bigRes={props.bigRes} poster={props.poster}/>
-
-<Cinema res={props.res} bigRes={props.bigRes} poster={props.poster}/>
+<Cinema res={props.res[0]} bigRes={props.bigRes[0]} poster={props.poster[0]}/>
+<Cinema res={props.res[1]} bigRes={props.bigRes[1]} poster={props.poster[1]}/>
         </div>
 }

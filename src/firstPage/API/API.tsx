@@ -2,9 +2,11 @@ import axios from "axios";
 
 export  class API{
    static async apiFunc(){
-       let response=await axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=54330e58`,{
-       })       
-       return response.data
+       let r1=await axios.get(`http://www.omdbapi.com/?i=tt3896198&apikey=54330e58`)
+       let r2=await axios.get(`http://www.omdbapi.com/?t=Game%20of%20Thrones&%20Season=1%20&%20Episode=1&apikey=54330e58`)
+       let resArray = []
+       resArray.push(r1,r2)
+       return resArray
        }
    
 }

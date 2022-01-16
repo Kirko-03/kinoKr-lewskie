@@ -10,7 +10,9 @@ type MainType={
 export let Cinema = (props:MainType) =>{
     let [fullInfo,setFullInfo] = useState<boolean>(false)
 return <div className={style.cinema}>
+    {
     <img  className={style.poster} src={props.poster} alt=""/>
+    }
 {
  fullInfo?props.bigRes:props.res
 }
