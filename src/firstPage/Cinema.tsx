@@ -8,6 +8,7 @@ type MainType={
 }
 
 export let Cinema = (props:MainType) =>{
+    
     let [fullInfo,setFullInfo] = useState<boolean>(false)
 return <div className={style.cinema}>
     {

@@ -14,5 +14,6 @@ console.log(props);
     return <div> 
 <Cinema res={props.res[0]} bigRes={props.bigRes[0]} poster={props.poster[0]}/>
 <Cinema res={props.res[1]} bigRes={props.bigRes[1]} poster={props.poster[1]}/>
+<Cinema res={props.res[2]} bigRes={props.bigRes[2]} poster={props.poster[2]}/>
         </div>
 }
