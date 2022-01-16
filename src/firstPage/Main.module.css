@@ -1,6 +1,8 @@
-.main{
+.cinema{
     display: flex;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 30px;
     margin-top: 0px;
     padding:10px;
@@ -9,6 +11,6 @@
     color:wheat
 }
 .poster{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
 }

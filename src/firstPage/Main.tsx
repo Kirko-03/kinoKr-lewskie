@@ -1,14 +1,19 @@
-import style from './Main.module.css'
+import { Cinema } from "./Cinema"
+
 
 type MainType={
+    bigRes:string
     poster:string
     res:string
 }
 
 export let Main = (props:MainType) =>{ 
 
-    return <div className={style.main}> 
-<img  className={style.poster} src={props.poster} alt=""/>
-{props.res}
+    return <div> 
+<Cinema res={props.res} bigRes={props.bigRes} poster={props.poster}/>
+
+<Cinema res={props.res} bigRes={props.bigRes} poster={props.poster}/>
+
+<Cinema res={props.res} bigRes={props.bigRes} poster={props.poster}/>
         </div>
 }
